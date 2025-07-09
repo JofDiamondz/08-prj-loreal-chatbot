@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat Assistant</title>
+    <title>L'Oréal Beauty Expert - Your Personal Beauty Advisor</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -19,14 +19,37 @@
     <div class="page-wrapper">
       <!------- Header / Branding ------->
       <header class="site-header">
-        <h1 class="site-title">Smart Product Advisor</h1>
+        <div class="brand-container">
+          <img src="img/loreal-logo.png" alt="L'Oréal" class="loreal-logo" />
+          <h1 class="site-title">Beauty Expert</h1>
+          <p class="site-subtitle">Your Personal French Beauty Advisor ✨</p>
+        </div>
       </header>
 
       <!------- Chat Area ------->
       <main>
         <section class="chatbox">
           <div id="chatWindow" class="chat-window">
-            <!-- messages will be appended here via JS -->
+            <!-- Initial welcome message -->
+            <div class="message-container assistant">
+              <div class="avatar-container">
+                <div class="avatar">
+                  <img
+                    src="img/loreal-bot.png"
+                    alt="L'Oréal Beauty Expert"
+                    class="avatar-image"
+                  />
+                </div>
+              </div>
+              <div class="message-bubble assistant">
+                <div class="message-content">
+                  Bonjour! 👋 I'm your personal L'Oréal beauty expert. I'm here
+                  to help you discover the perfect makeup, skincare, haircare,
+                  and fragrance products for your unique beauty needs. How may I
+                  assist you today? ✨
+                </div>
+              </div>
+            </div>
           </div>
 
           <form id="chatForm" class="chat-form">
@@ -35,7 +58,7 @@
               id="userInput"
               name="userInput"
               type="text"
-              placeholder="Ask me about products or routines…"
+              placeholder="Ask me about L'Oréal products, beauty routines, or tips..."
               autocomplete="off"
               required
             />
@@ -49,9 +72,8 @@
 
       <!------- Footer Links ------->
       <footer class="site-footer">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
+        <p>&copy; 2025 L'Oréal Beauty Expert. Because You're Worth It.</p>
         <nav>
-          <!-- These URLs are placeholders -->
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Use</a>
           <a href="#">Contact</a>
@@ -59,8 +81,6 @@
       </footer>
     </div>
 
-    <!-- secrets.js can be removed when using Cloudflare Workers for API requests -->
-    <script src="secrets.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
